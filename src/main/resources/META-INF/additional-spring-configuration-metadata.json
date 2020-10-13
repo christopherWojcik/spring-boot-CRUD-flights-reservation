@@ -1,0 +1,23 @@
+{
+  "properties": [
+    {
+      "name": "aircraft.generate",
+      "type": "java.lang.String",
+      "description": "Description for aircraft.generate."
+    },
+    {
+      "name": "flight.generate",
+      "type": "java.lang.String",
+      "description": "Description for flight.generate."
+    },
+    {
+      "name": "passenger.generate",
+      "type": "java.lang.String",
+      "description": "Description for passenger.generate."
+    },
+    {
+      "name": "mixedData.generate",
+      "type": "java.lang.String",
+      "description": "Description for mixedData.generate."
+    }
+  ] }
