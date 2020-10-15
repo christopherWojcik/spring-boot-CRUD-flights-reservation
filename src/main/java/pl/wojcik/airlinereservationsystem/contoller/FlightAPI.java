@@ -1,5 +1,7 @@
 package pl.wojcik.airlinereservationsystem.contoller;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -21,13 +23,22 @@ public class FlightAPI {
 
     public final FlightService service;
 
+    @ApiOperation(
+            value = "Find all flights.",
+            response = FlightDTO.class,
+            notes = "Provide information of all flights in DB.")
     @GetMapping
     public List<FlightDTO> findAll() {
         return service.findAll();
     }
 
+    @ApiOperation(
+            value = "Create flight.",
+            notes = "Create flight in MySQL DB from request - from simple form.")
     @PostMapping
-    public void createFlight(@RequestBody CreateFlightRequest request) {
+    public void createFlight(
+            @ApiParam(value = "request from Bootstrap form")
+            @RequestBody CreateFlightRequest request) {
         service.createFlight(request);
     }
 
