@@ -14,6 +14,8 @@ import java.util.List;
 @Repository
 public interface FlightRepository extends JpaRepository<Flight, Long>, JpaSpecificationExecutor<Flight> {
 
+    boolean existsByAirportAndDestinationAndFlightDate(String airport, String destination, LocalDate date);
+
     List<FlightDTO> findByAirport(String airport);
 
     List<FlightDTO> findByDestination(String destination);

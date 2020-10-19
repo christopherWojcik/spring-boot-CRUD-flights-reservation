@@ -15,5 +15,5 @@ public class CreateFlightRequest {
     private LocalDate flightArrival;
     private String airport;
     private String destination;
-    private AirCraft flightAirCraft;
+    private String flightAirCraft;
 }

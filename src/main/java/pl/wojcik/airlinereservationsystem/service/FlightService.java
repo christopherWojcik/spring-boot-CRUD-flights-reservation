@@ -2,10 +2,10 @@ package pl.wojcik.airlinereservationsystem.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import pl.wojcik.airlinereservationsystem.model.reservation.Reservation;
 import pl.wojcik.airlinereservationsystem.model.dto.FlightDTO;
 import pl.wojcik.airlinereservationsystem.model.flight.*;
 import pl.wojcik.airlinereservationsystem.model.mapper.FlightMapper;
+import pl.wojcik.airlinereservationsystem.model.reservation.Reservation;
 import pl.wojcik.airlinereservationsystem.repository.FlightRepository;
 
 import javax.mail.MessagingException;
@@ -95,7 +95,7 @@ public class FlightService {
         }
     }
 
-    public List<FlightDTO> getFlightsByAircraftID(Long id){
+    public List<FlightDTO> getFlightsByAircraftID(Long id) {
         return FlightMapper
                 .convertListOfEntitiesToDTOList(repository.getFlightsByFlightAirCraft_Id(id));
     }
