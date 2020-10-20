@@ -1,5 +1,9 @@
 package pl.wojcik.airlinereservationsystem.model.aircraft;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations.ApiParam;
 import lombok.*;
 import pl.wojcik.airlinereservationsystem.model.flight.Flight;
 

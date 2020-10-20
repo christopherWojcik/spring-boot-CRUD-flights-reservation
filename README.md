@@ -2,27 +2,32 @@
 # CRUD Spring Boot project
 [![CCO](https://img.shields.io/github/repo-size/christopherWojcik/spring-boot-CRUD-flights-reservation?style=plastic)](https://img.shields.io/github/repo-size/christopherWojcik/spring-boot-CRUD-flights-reservation?style=plastic) 
 ![GitHub last commit](https://img.shields.io/github/last-commit/christopherWojcik/spring-boot-CRUD-flights-reservation?style=plastic)
+[![](https://img.shields.io/badge/License-MIT-brightgreen)](https://creativecommons.org/publicdomain/zero/1.0/) <br>
+<br>
+## Simple CRUD application - flights reservation.<br>
 
-Simple CRUD application - flights reservation.<br>
-
-*CREATE -* add aicraft to DB<br>
-*READ -* get all aircrafts, get aircraft <code>List</code> by parameters (capacity and operable status: active - true, inactive - false), get flight <code>List</code> by parameters (airport of departure and also destination)<br>
-*UPDATE -* update aircraft of given id<br>
-*DELETE -* delete aircraft<br>
+*CREATE -* add aicraft to SQL DB<br>
+*READ -* get all aircrafts, get aircraft <code>List</code> by request parameters, get flights <code>List</code> by request parameters<br>
+*UPDATE -* update aircraft in SQL DB<br>
+*DELETE -* delete aircraft in SQL<br>
 
 Project has been made during SDA Course - Java from Scratch :) <br>
-Data are generated automatically from csv file. Additionally in file: <code>application.properties</code>, You can set up generate flag on true or false. Data are not related with the real ones. Only for educational purposes.
+Data are generated automatically from csv file. Additionally in file: <code>application.properties</code>, You can set up generate several flags on true or false. Data are not related with the real ones. Only for educational purposes.
 <br>
-As a UI layer, can be connected Angular project - link: [<code>CRUD-UI-flights-reservation</code>][UI-project]
+<br>
+As a UI layer, can be connected Angular project, for example: [<code>CRUD-UI-flights-reservation</code>][UI-project]
 Project uses MySQL database.  
+
+## Run 
+Need to be done ...
 
 ## Swagger 2.0 documentation
 In Chrome browser - install JsonViewer for better reading :) 
-[<code>http://localhost:8080/documentation/v2/api-docs</code>][swagger-docs-url]
+[<code>localhost:8080/v2/api-docs</code>][swagger-docs-url]
 </br>
 
 ## Swagger-UI:
-[<code>http://localhost:8080/documentation/swagger-ui.html</code>][swagger-ui-url]
+[<code>localhost:8080/swagger-ui.html</code>][swagger-ui-url]
 
 ## Future development :)
 What can be done? Almost everything :) <br>
@@ -42,7 +47,7 @@ Here are my suggestions for improvements: <br>
 and also remember :)
 <br>
 ``` java 
-public boolean isGoodCandidate(String name){
+public boolean isGoodCandidateForCooperation(String name){
     return checkPassion(name) && checkHardWorking(name) && checkBestCompanyInvestment(name);
 }
 
@@ -59,9 +64,9 @@ private boolean checkPassion(String name) {
 }
 ```
 
-[swagger-docs-url]: http://localhost:8080/documentation/v2/api-docs
-[swagger-ui-url]: http://localhost:8080/documentation/swagger-ui.html
+[swagger-docs-url]: http://localhost:8080v2/api-docs
+[swagger-ui-url]: http://localhost:8080/swagger-ui.html
 [UI-project]: https://github.com/christopherWojcik/UI-CRUD-flights-reservation
 
 ## License
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+[![](https://img.shields.io/badge/License-MIT-brightgreen)](https://creativecommons.org/publicdomain/zero/1.0/)

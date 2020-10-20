@@ -6,8 +6,6 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.wojcik.airlinereservationsystem.model.dto.FlightDTO;
 import pl.wojcik.airlinereservationsystem.model.flight.CreateFlightRequest;
@@ -22,7 +20,8 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(path = "/api/flights")
+@RequestMapping(
+        path = "/api/flights")
 public class FlightAPI {
 
     public final FlightService service;
@@ -32,8 +31,9 @@ public class FlightAPI {
             response = FlightDTO.class,
             notes = "Provide information of all flights in DB.")
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Well done :)"),
-            @ApiResponse(code = 403, message = "Forbidden! I will call the police :)")
+            @ApiResponse(code = 200, message = "Well done! You got it :)"),
+            @ApiResponse(code = 403, message = "Forbidden! Check once again authorization and authentication in Your request!"),
+            @ApiResponse(code = 404, message = "Something went wrong with DB or configuration")
     })
     @GetMapping
     public List<FlightDTO> findAll() {
@@ -41,12 +41,12 @@ public class FlightAPI {
     }
 
     @ApiOperation(
-            value = "Create flight.",
+            value = "Creates flight and saves in SQL DB.",
             httpMethod = "POST",
-            notes = "Add flight in MySQL DB from request - from simple form.")
+            notes = "Adds flight in MySQL DB from request  - simple form.")
     @PostMapping
     public void createFlight(
-            @ApiParam(value = "request from Bootstrap form")
+            @ApiParam(required = true)
             @RequestBody CreateFlightRequest request) {
         service.createFlight(request);
     }

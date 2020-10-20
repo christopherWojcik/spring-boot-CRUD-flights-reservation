@@ -25,14 +25,13 @@ public class SwaggerConfig {
     }
 
     private ApiInfo createApiInfo() {
-        return new ApiInfo("REST Spring Boot App",
-                "REST Api for Spring Boot CRUD project. Simple app for flights reservation. ",
+        return new ApiInfo("Spring Boot REST API",
+                "Spring Boot REST API for CRUD project. Simple app for flights reservation. ",
                 "version: 1.00",
                 "",
                 new Contact("Krzyszof Wójcik", "https://www.linkedin.com/in/krzysztof-w%C3%B3jcik-2344a1192/", "kristricity@gmail.com"),
-                "License: PUBLIC DOMAIN.",
+                "License: PUBLIC.",
                 "",
                 Collections.emptyList());
     }
-
 }
