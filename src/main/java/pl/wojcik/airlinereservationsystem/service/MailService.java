@@ -25,9 +25,6 @@ public class MailService {
         mimeMessageHelper.setFrom(emailAddress);
         mimeMessageHelper.setSubject(subject);
         mimeMessageHelper.setText(text);
-        System.out.println("before send ... ... ...");
         javaMailSender.send(mimeMessage);
-        System.out.println("after send ... ... ...");
-
     }
 }

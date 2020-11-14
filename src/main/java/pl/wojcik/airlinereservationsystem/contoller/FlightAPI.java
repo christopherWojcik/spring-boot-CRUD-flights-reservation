@@ -31,7 +31,7 @@ public class FlightAPI {
             response = FlightDTO.class,
             notes = "Provide information of all flights in DB.")
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Well done! You got it :)"),
+            @ApiResponse(code = 200, message = "OK"),
             @ApiResponse(code = 403, message = "Forbidden! Check once again authorization and authentication in Your request!"),
             @ApiResponse(code = 404, message = "Something went wrong with DB or configuration")
     })
